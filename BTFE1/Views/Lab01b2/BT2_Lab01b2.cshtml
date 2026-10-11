@@ -1,0 +1,95 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sử dụng Table để thiết kế các trang web có cấu trúc </title>
+    <style>
+        table {
+            width: 600px;
+            height: 400px;
+            border-collapse: collapse;
+            margin: auto;
+            text-align: center;
+        }
+
+        td {
+            border: 2px solid #555;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            @*Layout 1*@
+            <td colspan="2" style="height: 20%;">Header</td>
+        </tr>
+        <tr>
+            <td style="width: 30%;">Sidebar Left</td>
+            <td style="width: 70%;">Content 1</td>
+        </tr>
+    </table>
+
+    <table>
+        @*Layout 2*@
+        <tr><td colspan="2" style="height: 25%;">Header</td></tr>
+        <tr>
+            <td style="width: 70%;">Content</td>
+            <td style="width: 30%;">Sidebar Right</td>
+        </tr>
+    </table>
+
+    <table>
+        @*Layout 3*@
+        <tr><td colspan="2" style="height: 20%;">Header</td></tr>
+        <tr>
+            <td style="width: 70%;">Content</td>
+            <td style="width: 30%;">Sidebar Right</td>
+        </tr>
+        <tr><td colspan="2" style="height: 20%;">Footer</td></tr>
+    </table>
+
+    <table>
+        @*Layout 4*@
+        <tr><td colspan="2" style="height: 20%;">Header</td></tr>
+        <tr><td colspan="2" style="height: 10%;">Nav</td></tr>
+        <tr>
+            <td style="width: 30%;">Sidebar Left</td>
+            <td style="width: 70%;">Content</td>
+        </tr>
+    </table>
+
+    <table>
+        @*Layout 5*@
+        <tr>
+            <td colspan="7" style="height: 20%;">Header Left</td>
+            <td colspan="3">Header Right</td>
+        </tr>
+        <tr><td colspan="10" style="height: 10%;">Nav</td></tr>
+        <tr>
+            <td colspan="3">Sidebar Left</td>
+            <td colspan="7">Content</td>
+        </tr>
+    </table>
+
+    <table>
+        @*Layout 6*@
+        <tr>
+            <td colspan="1" style="height: 15%;">Header Left</td>
+            <td colspan="3">Header Right</td>
+        </tr>
+        <tr>
+            <td colspan="1" style="width: 25%;">Sidebar Left</td>
+            <td colspan="2" style="width: 50%;">Main Content</td>
+            <td colspan="1" style="width: 25%;">Sidebar Right</td>
+        </tr>
+        <tr><td colspan="4" style="height: 15%;">Footer</td></tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sử dụng HTML5 để thiết kế các trang web có cấu trúc </title>
+    <style>
+        .grid-container {
+            width: 600px;
+            height: 350px;
+            margin: 0 auto 40px auto;
+            border: 2px solid #555;
+            text-align: center;
+            font-weight: bold;
+            background-color: #f0f8ff;
+        }
+
+            .grid-container > * {
+                border: 1px solid #555;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        .title {
+            text-align: center;
+            color: blue;
+            margin-top: 40px;
+        }
+
+        /* Khai báo cấu trúc lưới (Grid) cho cả 6 layout */
+        .layout1 {
+            display: grid;
+            grid-template: "h h" 20% "s c" 80% / 30% 70%;
+        }
+
+        .layout2 {
+            display: grid;
+            grid-template: "h h" 25% "c s" 75% / 70% 30%;
+        }
+
+        .layout3 {
+            display: grid;
+            grid-template: "h h" 20% "c s" 60% "f f" 20% / 70% 30%;
+        }
+
+        .layout4 {
+            display: grid;
+            grid-template: "h h" 20% "n n" 10% "s c" 70% / 30% 70%;
+        }
+
+        .layout5 {
+            display: grid;
+            grid-template: "hl hr" 20% "n n" 10% "s c" 70% / 70% 30%;
+        }
+
+        .layout6 {
+            display: grid;
+            grid-template: "hl hr hr" 15% "sl c sr" 70% "f f f" 15% / 25% 50% 25%;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">Layout 1 (HTML5)</h2>
+    <div class="grid-container layout1">
+        <header style="grid-area: h;">Header</header>
+        <aside style="grid-area: s;">Sidebar Left</aside>
+        <main style="grid-area: c;">Content</main>
+    </div>
+
+    <h2 class="title">Layout 2 (HTML5)</h2>
+    <div class="grid-container layout2">
+        <header style="grid-area: h;">Header</header>
+        <main style="grid-area: c;">Content</main>
+        <aside style="grid-area: s;">Sidebar Right</aside>
+    </div>
+
+    <h2 class="title">Layout 3 (HTML5)</h2>
+    <div class="grid-container layout3">
+        <header style="grid-area: h;">Header</header>
+        <main style="grid-area: c;">Content</main>
+        <aside style="grid-area: s;">Sidebar Right</aside>
+        <footer style="grid-area: f;">Footer</footer>
+    </div>
+
+    <h2 class="title">Layout 4 (HTML5)</h2>
+    <div class="grid-container layout4">
+        <header style="grid-area: h;">Header</header>
+        <nav style="grid-area: n;">Nav</nav>
+        <aside style="grid-area: s;">Sidebar Left</aside>
+        <main style="grid-area: c;">Content</main>
+    </div>
+
+    <h2 class="title">Layout 5 (HTML5)</h2>
+    <div class="grid-container layout5">
+        <header style="grid-area: hl;">Header Left</header>
+        <header style="grid-area: hr;">Header Right</header>
+        <nav style="grid-area: n;">Nav</nav>
+        <aside style="grid-area: s;">Sidebar Left</aside>
+        <main style="grid-area: c;">Content</main>
+    </div>
+
+    <h2 class="title">Layout 6 (HTML5)</h2>
+    <div class="grid-container layout6">
+        <header style="grid-area: hl;">Header Left</header>
+        <header style="grid-area: hr;">Header Right</header>
+        <aside style="grid-area: sl;">Sidebar Left</aside>
+        <main style="grid-area: c;">Main Content</main>
+        <aside style="grid-area: sr;">Sidebar Right</aside>
+        <footer style="grid-area: f;">Footer</footer>
+    </div>
+</body>
+</html>

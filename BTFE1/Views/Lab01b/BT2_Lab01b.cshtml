@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sử dụng thuộc tính colspan và rowspan để thực hiện các yêu cầu</title>
+</head>
+<body>
+    <table border="1" width=200px height="200px" cellpadding="5" cellspacing="5">
+        <tr>
+            <!--Thêm dòng-->
+            <th colspan="2">1 2</th> <!--Thêm tiêu đề-->
+            <th colspan="3">2 3 4</th> <!--colspan(gộp cột) theo chiều ngang/rowspan(gộp hàng)theo chiều từ trên xuống-->
+            <!--
+            <th>3</th>
+            <th>4</th>
+            -->
+            <th>5</th>
+        </tr>
+        <tr style="vertical-align:top; text-align:right ">
+            <!--Đang để áp dụng style trên các ô cùng dòng-->
+            <td>6</td> <!--Thêm dữ liệu--> <!--Có thể hiệu chỉnh align,valign cho từng thằng-->
+            <td>7</td>
+            <td>8</td>
+            <td rowspan="3" align="center" valign="middle">9 14 19</td>
+            <td colspan="2" rowspan="2">9-10<br>14-15</td>
+            @*d>10</td>*@
+        <tr style="vertical-align:top; text-align:right ">
+            <!--Đang để áp dụng style trên các ô cùng dòng-->
+            <td>11</td> <!--Thêm dữ liệu--> <!--Có thể hiệu chỉnh align,valign cho từng thằng-->
+            <td>12</td>
+            <td>13</td>
+            @*<td>14</td>*@
+            @*<td>15</td>*@
+        </tr>
+        <tr style="vertical-align:top; text-align:right ">
+            <!--Đang để áp dụng style trên các ô cùng dòng-->
+            <td>16</td> <!--Thêm dữ liệu--> <!--Có thể hiệu chỉnh align,valign cho từng thằng-->
+            <td>17</td>
+            <td rowspan="2">18 23</td>
+            @*<td>19</td>*@
+            <td>20</td>
+        <tr style="vertical-align:top; text-align:right ">
+            <!--Đang để áp dụng style trên các ô cùng dòng-->
+            <td>21</td> <!--Thêm dữ liệu--> <!--Có thể hiệu chỉnh align,valign cho từng thằng-->
+            <td>22</td>
+            @*<td>23</td>*@
+            <td>24</td>
+            <td>25</td>
+
+        </tr>
+    </table>
+</body>
+</html>
+

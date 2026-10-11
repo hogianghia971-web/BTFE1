@@ -1,0 +1,173 @@
+﻿
+@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Sử dụng thẻ Div để thiết kế các trang web có cấu trúc </title>
+    <style>
+        /* Định dạng khung chứa tổng thể */
+        .wrap {
+            width: 600px;
+            height: 350px;
+            border: 2px solid #555;
+            margin: 0 auto 40px auto;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            font-weight: bold;
+            background-color: #e8f5e9;
+        }
+
+        /* Định dạng chung cho các ô và các hàng */
+        .box {
+            border: 1px solid #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .row {
+            display: flex;
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            color: #2e7d32;
+            margin-top: 40px;
+            font-family: sans-serif;
+        }
+
+        /* Các class hỗ trợ chia chiều cao (height) */
+        .h-10 {
+            height: 10%;
+        }
+
+        .h-15 {
+            height: 15%;
+        }
+
+        .h-20 {
+            height: 20%;
+        }
+
+        .h-25 {
+            height: 25%;
+        }
+
+        .h-60 {
+            height: 60%;
+        }
+
+        .h-70 {
+            height: 70%;
+        }
+
+        .h-75 {
+            height: 75%;
+        }
+
+        .h-80 {
+            height: 80%;
+        }
+
+        .h-100 {
+            height: 100%;
+        }
+
+        /* Các class hỗ trợ chia chiều rộng (width) */
+        .w-25 {
+            width: 25%;
+        }
+
+        .w-30 {
+            width: 30%;
+        }
+
+        .w-50 {
+            width: 50%;
+        }
+
+        .w-70 {
+            width: 70%;
+        }
+
+        .w-75 {
+            width: 75%;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">Layout 1 (Thẻ Div)</h2>
+    <div class="wrap">
+        <div class="box h-20 w-100">Header</div>
+        <div class="row h-80">
+            <div class="box h-100 w-30">Sidebar Left</div>
+            <div class="box h-100 w-70">Content 1</div>
+        </div>
+    </div>
+
+    <h2 class="title">Layout 2 (Thẻ Div)</h2>
+    <div class="wrap">
+        <div class="box h-25 w-100">Header</div>
+        <div class="row h-75">
+            <div class="box h-100 w-70">Content</div>
+            <div class="box h-100 w-30">Sidebar Right</div>
+        </div>
+    </div>
+
+    <h2 class="title">Layout 3 (Thẻ Div)</h2>
+    <div class="wrap">
+        <div class="box h-20 w-100">Header</div>
+        <div class="row h-60">
+            <div class="box h-100 w-70">Content</div>
+            <div class="box h-100 w-30">Sidebar Right</div>
+        </div>
+        <div class="box h-20 w-100">Footer</div>
+    </div>
+
+    <h2 class="title">Layout 4 (Thẻ Div)</h2>
+    <div class="wrap">
+        <div class="box h-20 w-100">Header</div>
+        <div class="box h-10 w-100">Nav</div>
+        <div class="row h-70">
+            <div class="box h-100 w-30">Sidebar Left</div>
+            <div class="box h-100 w-70">Content</div>
+        </div>
+    </div>
+
+    <h2 class="title">Layout 5 (Thẻ Div)</h2>
+    <div class="wrap">
+        <div class="row h-20">
+            <div class="box h-100 w-70">Header Left</div>
+            <div class="box h-100 w-30">Header Right</div>
+        </div>
+        <div class="box h-10 w-100">Nav</div>
+        <div class="row h-70">
+            <div class="box h-100 w-30">Sidebar Left</div>
+            <div class="box h-100 w-70">Content</div>
+        </div>
+    </div>
+
+    <h2 class="title">Layout 6 (Thẻ Div)</h2>
+    <div class="wrap">
+        <div class="row h-15">
+            <div class="box h-100 w-25">Header Left</div>
+            <div class="box h-100 w-75">Header Right</div>
+        </div>
+        <div class="row h-70">
+            <div class="box h-100 w-25">Sidebar Left</div>
+            <div class="box h-100 w-50">Main Content</div>
+            <div class="box h-100 w-25">Sidebar Right</div>
+        </div>
+        <div class="box h-15 w-100">Footer</div>
+    </div>
+</body>
+</html>
